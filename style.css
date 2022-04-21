@@ -1,0 +1,344 @@
+body {
+    background-color: rgb(102, 189, 137);
+    overflow-x: hidden;
+    position: relative;
+    font-family: 'Yuji Syuku', serif;
+
+    /* font-family: 'Yatra One', cursive; */
+    /* font-family: 'Trochut', cursive; */
+    /* font-family: 'Mansalva', cursive; */
+    /* font-family: 'Vast Shadow', cursive; */
+    /* font-family: 'Rubik Beastly', cursive; */
+    /* font-family: 'Patrick Hand SC', cursive; */
+    /* font-family: 'Faster One', cursive; */
+    /* font-family: 'Walter Turncoat', cursive; */
+}
+
+
+
+
+
+.navbar {
+    background-color: rgb(5, 138, 76);
+    overflow: hidden;
+    height: 63px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(3, 3, 3);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+
+
+}
+
+
+
+.navbar ul {
+    margin: 2px 0 0 0;
+    list-style: none;
+    position: relative;
+    animation: header;
+    animation-duration: 3s;
+}
+
+@keyframes header {
+    0% {
+        top: -100px
+    }
+
+    100% {
+        top: 0
+    }
+}
+
+
+.navbar a:hover {
+    background-color: rgb(161, 233, 155);
+    color: black;
+
+
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #bae8ce;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: #fff;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    background-image: linear-gradient(to right, rgb(12, 128, 6), rgb(73, 241, 87), rgb(251, 251, 251));
+    text-decoration: none;
+    padding: 2rem 3rem;
+    margin: 10px 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: rgb(5, 138, 76) 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    opacity: 0;
+    animation-name: btn;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.btn1 {
+    display: inline-block;
+    color: white;
+    background-color: #375c94;
+    text-decoration: none;
+    padding: 2rem 3rem;
+    margin: 10px 5px;
+    font-size: 18px;
+    font-weight: bolder;
+    border: rgb(6, 14, 56) 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    opacity: 0;
+    animation-name: btn1;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn1 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.btn2 {
+    display: inline-block;
+    color: white;
+    background-image: linear-gradient(to right, rgb(115, 16, 201), rgb(95, 6, 101), rgb(224, 22, 181), rgb(245, 157, 24), rgb(255, 255, 8));
+    text-decoration: none;
+    padding: 2rem 3rem;
+    font-size: 18px;
+    font-weight: bolder;
+    border: rgb(95, 6, 154) 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    margin: 10px 5px;
+    opacity: 0;
+    animation-name: btn2;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn2 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.btn3 {
+    display: inline-block;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    background-color: yellow;
+    text-decoration: none;
+    padding: 2rem 3rem;
+    font-size: 18px;
+    font-weight: bolder;
+    border: #080808 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    margin: 10px 5px;
+    opacity: 0;
+    animation-name: btn3;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn3 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.btn4 {
+    display: inline-block;
+    color: rgb(204, 106, 240);
+    text-shadow: 2px 2px 4px #000000;
+    background-color: black;
+    text-decoration: none;
+    padding: 2rem 3rem;
+    font-size: 18px;
+    font-weight: bolder;
+    border: rgb(204, 106, 240) 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    margin: 10px 5px;
+    opacity: 0;
+    animation-name: btn4;
+    animation-duration: 3s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn4 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.btn5 {
+    display: inline-block;
+    color: black;
+    background-image: linear-gradient(to right, rgb(94, 89, 248), rgb(233, 82, 82), rgb(251, 251, 251));
+    text-decoration: none;
+    padding: 2rem 3rem;
+    font-size: 18px;
+    font-weight: bolder;
+    border: rgb(95, 6, 154) 2px solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    margin: 10px 5px;
+    opacity: 0;
+    animation-name: btn5;
+    animation-duration: 3s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes btn5 {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.art {
+    
+    text-align: center;
+    border-radius: 10px;
+    padding: 4px 4px;
+    margin: 5px 10px 20px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+font-weight: bolder;
+}
+
+
+
+
+
+.foot {
+    display: block;
+    color: #333;
+    text-align: center;
+    background-color: rgb(5, 138, 76);
+    padding: 10px 10px;
+    margin: 20px 0 20px 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.32);
+}
+
+.foot a {
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
+
+.foot p {
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+
+
+
+
+
+
+
+@media(max-width:568px) {
+    .navbar-nav {
+        display: none;
+
+    }
+}

@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(0deg, #8e517d 30%, rgb(0, 0, 0) 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* font-family: 'Yuji Syuku', serif; */
+    /* font-family: 'Yatra One', cursive; */
+    /* font-family: 'Trochut', cursive; */
+    /* font-family: 'Mansalva', cursive; */
+    /* font-family: 'Vast Shadow', cursive; */
+    /* font-family: 'Rubik Beastly', cursive; */
+    /* font-family: 'Patrick Hand SC', cursive; */
+    /* font-family: 'Faster One', cursive; */
+    /* font-family: 'Walter Turncoat', cursive; */
+}
+
+
+.navbar {
+    width: 100%;
+    background-color: #66114e;
+    overflow: hidden;
+    height: 63px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.music-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 20px 0 black;
+    display: flex;
+    padding: 20px 30px;
+    position: relative;
+    margin: 100px 0px;
+    z-index: 10;
+    
+
+}
+
+.img-container {
+    position: relative;
+    width:  110px;
+}
+
+.img-container img {
+    width: inherit;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation: rotate 3s linear infinite;
+
+  animation-play-state: paused;
+}
+
+.music-container.play .img-container img {
+ animation-play-state: running;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform:  rotate(360deg);
+    }
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.action-btn {
+    background-color: #fff;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding:  10px;
+    margin:  0 20px;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.action-btn:focus {
+    outline: 0;
+}
+
+.music-info {
+    background-color: #8e517d66;
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width:  calc(100% - 40px);
+    padding: 10px 10px 10px 150px;
+    opacity: 0;
+    transform: translateY(0%);
+    transition: transform 1s ease-in, opacity 1s  ease-in;
+}
+
+.music-info h4 {
+    margin: 0;
+    
+}
+
+.music-container.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container{
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #f021b5;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+
+
+h1 {
+    text-align: center;
+}
+
+
+
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+
+
+}
+
+
+
+.navbar ul {
+    margin: 2px 0 0 0;
+    list-style: none;
+    position: relative;
+    animation: header;
+    animation-duration: 3s;
+}
+
+@keyframes header {
+    0% {
+        top: -100px
+    }
+
+    100% {
+        top: 0
+    }
+}
+
+
+.navbar a:hover {
+    background-color: rgb(237, 167, 245);
+    color: black;
+
+
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(76, 71, 71);
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+
+}
+
+.side-nav a {
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #faf8f8;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav a:hover {
+    color: rgb(230, 225, 106);
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+
+}

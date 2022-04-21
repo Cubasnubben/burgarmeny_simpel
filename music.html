@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="music.css">
+     
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Trochut&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Rubik+Beastly&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Faster+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Walter+Turncoat&display=swap');
+        </style>
+    <title>MusicPlayer</title>
+</head>
+<body>
+
+  
+
+
+
+    <nav class="navbar">
+        <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#030303" stroke-width="5" />
+                    <path d="M0,14 30,14" stroke="#787474" stroke-width="5" />
+                    <path d="M0,23 30,23" stroke="#fcfafa" stroke-width="5" />
+                </svg>
+            </a>
+        </span>
+    
+        <ul class="navbar-nav">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="music.html">Music Player</a></li>
+            <li><a href="#">Lista</a></li>
+            <li><a href="#">Spel</a></li>
+    
+        </ul>
+    </nav>
+    
+    <!-- Slide-Menu -->
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <a href="index.html">Hem</a>
+        <a href="music.html">Music Player</a>
+        <a href="#">Lista</a>
+        <a href="#">Spel</a>
+    </div>
+
+    <h1>MUSIKSPELARE</h1>
+
+
+    <script>
+        function openSlideMenu() {
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+
+        }
+
+        function closeSlideMenu() {
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+
+        }
+    </script>
+
+<div class="music-container ">
+    <div class="music-info">
+        <h4 id="title">Spänn öronen</h4>
+        <div class="progress-container">
+            <div class="progress"></div>
+        </div>
+    </div>
+    <audio src="music/applause.mp3" id="audio"></audio>
+    <audio src="music/HejsanSvejsan.mp3" id="audio"></audio>
+    <audio src="music/FörFan.mp3" id="audio"></audio>
+    <audio src="music/bejbi.mp3" id="audio"></audio>
+    <audio src="music/bomb.mp3" id="audio"></audio>
+    <audio src="music/gubbe.mp3" id="audio"></audio>
+
+
+
+    <div class="img-container">
+        <img src="images/skull.jpg" alt="music-cover" id="cover" />
+    </div>
+
+    <div class="navigation">
+        <button id="prev" class="action-btn">
+            <i class="fas fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn action-btn-big">
+            <i class="fas fa-play"></i>
+        </button>
+        <button id="next" class="action-btn">
+            <i class="fas fa-forward"></i>
+        </button>
+    </div>
+</div>
+
+    <script src="music.js"></script>
+
+</body>
+</html>
